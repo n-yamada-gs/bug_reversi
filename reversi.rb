@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative './lib/reversi_methods'
-
 class Reversi
   include ReversiMethods
 
@@ -28,7 +27,6 @@ class Reversi
         toggle_stone
         next
       end
-
       print "command? (#{@current_stone == WHITE_STONE ? '白○' : '黒●'}) > "
       command = gets.chomp
       break if QUIT_COMMANDS.include?(command)
